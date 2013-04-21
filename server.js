@@ -1,12 +1,7 @@
-
-/**
- * Module dependencies.
- */
-
-var express = require('express')
-  , routes = require('./routes')
-  , http = require('http')
-  , path = require('path');
+var express = require('express'),
+	routes = require('./routes/routes.js'),
+	http = require('http'),
+	path = require('path');
 
 var app = express();
 
@@ -22,9 +17,9 @@ app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', routes.index);
-app.get('/dbget_cv', routes.index);
-app.get('/dbget_projects', routes.index);
-app.get('/dbget_projects/:id', routes.index);
+app.get('/dbget_cv', routes.cv);
+app.get('/dbget_projects', routes.allProjects);
+app.get('/dbget_projects/:id', routes.oneProject);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
