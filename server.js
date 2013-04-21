@@ -16,10 +16,11 @@ app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', routes.index);
 app.get('/dbget_cv', routes.cv);
 app.get('/dbget_projects', routes.allProjects);
 app.get('/dbget_projects/:id', routes.oneProject);
+app.get('/dbget_blogs', routes.allProjects);
+app.get('/dbget_blogs/:id', routes.oneProject);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
