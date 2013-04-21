@@ -4,7 +4,7 @@
  */
 
 var express = require('express')
-  , routes = require('./routes/routes')
+  , routes = require('./routes')
   , http = require('http')
   , path = require('path');
 
@@ -21,6 +21,7 @@ app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/', routes.index);
 app.get('/dbget_cv', routes.index);
 app.get('/dbget_projects', routes.index);
 app.get('/dbget_projects/:id', routes.index);
