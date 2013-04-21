@@ -1,8 +1,78 @@
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:700);
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300);
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background:url('img/squairy_light.png') repeat center center;
+}
+
+.container-fluid {
+	max-width:1140px;
+	margin:0 auto;
+}
+
+p {
+	font-family:Merriweather;
+	font-weight:300;
 }
 
 a {
-  color: #00B7FF;
+  color: #566172;
+}
+
+a:hover {
+	color:#222222;
+}
+
+#mynavbar {
+	padding-top:30px;
+}
+
+#banner {
+	padding:40px 0;
+}
+
+#name {
+	font-family:Playfair Display;
+	font-weight:700;
+	font-size:48px;
+	text-align:center;
+}
+
+#sub-name {
+	font-family:Lato;
+	font-size:16px;
+	text-align:center;
+}
+
+.mynav {
+	font-family:Lato;
+	font-size:24px;
+	text-align:center;
+}
+
+.mynav a {
+	color:#444444;
+}
+
+#content-feed {
+	width:100%;
+}
+
+#home-splash {
+	width:100%;
+	//background-color:#FFD464;
+	min-height:400px;
+}
+
+.footer-text {
+	margin-top:30px;
+	padding-top:20px;
+	color:#BBBBBB;
+	text-align:center;
+	font-family:Lato;
+	font-weight:300;
+	border-top:1px solid #E4E4E4;
 }
