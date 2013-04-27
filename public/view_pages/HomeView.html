@@ -1,3 +1,70 @@
-<div id="home-splash">
+<div class="full-width splash welcome-splash-container">
+	<div class="container-fluid splash-inner" id="welcome-splash">
+		<div class="row-fluid center">
+			<div class="span12">
+				<h1 class="title light">Welcome</h1>
+			</div>
+		</div>
+	</div>
+</div>
 
+<div class="full-width splash projects-splash-container">
+	<div class="container-fluid splash-inner" id="projects-splash">
+		<div class="row-fluid center">
+			<div class="span1">
+				&lt;
+			</div>
+			<div class="span10">
+				<h1 class="title dark">Projects</h1>
+			</div>
+			<div class="span1">
+				&gt;
+			</div>
+		</div>
+	</div>
+	<div class="full-width" id="projects-splash-wrapper">
+		<% if (projects.length == 0) { %>
+			<h2>No Projects</h2>
+		<% } else { %>
+			<% var i = 0; %>
+			<% $.each(projects,function(key,project){ %>
+			<%= '<div class="project-wrapper" id="project' + i + '" style="left:' + i + '00%">' %>
+					<div class="container-fluid project-container">
+						<div class="row-fluid">
+							<div class="span1"></div>
+							<div class="span10">
+								<%= project.title %>
+							</div>
+							<div class="span1"></div>
+						</div>
+					</div>
+				</div>
+				<% i += 1; %>
+			<% }) %>
+		<% } %>
+	</div>
+</div>
+
+<div class="full-width splash cv-splash-container">
+	<div class="container-fluid splash-inner" id="cv-splash">
+		<div class="row-fluid">
+			<div class="span2"></div>
+			<div class="span8">
+				<div class="home-cv">
+
+				</div>
+			</div>
+			<div class="span2"></div>
+		</div>
+	</div>
+</div>
+
+<div class="full-width splash blog-splash-container">
+	<div class="container-fluid splash-inner" id="blog-splash">
+		<div class="row-fluid center">
+			<div class="span12">
+				<h1 class="title dark">Blog</h1>
+			</div>
+		</div>
+	</div>
 </div>

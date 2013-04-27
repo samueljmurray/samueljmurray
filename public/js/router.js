@@ -17,10 +17,12 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	home : function() {
-		if (!this.homeView) {
-			this.homeView = new HomeView();
-		}
-		$('#content-feed').html(this.homeView.el);
+		var homeitems = new Homeitems();
+		homeitems.fetch({success:function() {
+			$('#content-feed').html(new HomeView({
+				model:homeitems
+			}).el);
+		}});
 	},
 
 	cv : function() {

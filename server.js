@@ -16,6 +16,7 @@ app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/dbget_homeitems', routes.homeitems);
 app.get('/dbget_cv', routes.cv);
 app.get('/dbget_projects', routes.allProjects);
 app.get('/dbget_projects/:id', routes.oneProject);
