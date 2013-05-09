@@ -1,7 +1,8 @@
 var AppRouter = Backbone.Router.extend({
 
 	routes: {
-		""					: "home",
+		""					: "construction",
+		"home"			: "home",
 		"cv"				: "cv",
 		"projects"			: "allProjects",
 		"projects/:id"		: "oneProject",
@@ -75,11 +76,18 @@ var AppRouter = Backbone.Router.extend({
 			this.notFoundView = new NotFoundView();
 		}
 		$("#content-feed").html(this.notFoundView.el);
-	}
+	},
+
+	construction : function() {
+		if (!this.constructionView) {
+			this.constructionView = new ConstructionView();
+		}
+		$('#content-feed').html(this.constructionView.el);
+	},
 
 });
 
-utils.loadTemplate(['HeaderView', 'HomeView', 'CvView', 'ProjectListView', 'ProjectView', 'BlogListView', 'BlogView', 'NotFoundView'], function() {
+utils.loadTemplate(['HeaderView', 'HomeView', 'CvView', 'ProjectListView', 'ProjectView', 'BlogListView', 'BlogView', 'NotFoundView', 'ConstructionView'], function() {
 	router = new AppRouter();
 	Backbone.history.start();
 });

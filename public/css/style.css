@@ -4,15 +4,25 @@
 @import url(http://fonts.googleapis.com/css?family=Merriweather:400,300);
 @import url(http://fonts.googleapis.com/css?family=Lobster+Two:700,700italic);
 
-body {
+html,body {
+	padding: 0;
+	margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   height:100%;
-  position:relative;
+}
+
+.body-wrapper {
+	position:relative;
+	min-height:100%;
 }
 
 .container-fluid, .container {
 	max-width:1140px;
 	margin:0 auto;
+}
+
+.container:first-of-type {
+	margin-top:100px;
 }
 
 .full-width {
@@ -210,7 +220,7 @@ a:hover {
 
 .project-scroll {
 	display:block;
-	top:350px;
+	top:400px;
 	width:60px;
 	height:60px;
 	position:relative;
