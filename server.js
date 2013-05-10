@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/dbget_homeitems', routes.homeitems);
 app.get('/dbget_cv', routes.cv);
 app.get('/dbget_projects', routes.allProjects);
-app.get('/dbget_projects/:id', routes.oneProject);
+app.get('/dbget_projects/:permalink', routes.oneProject);
 app.get('/dbget_blogs', routes.allProjects);
 app.get('/dbget_blogs/:id', routes.oneProject);
 

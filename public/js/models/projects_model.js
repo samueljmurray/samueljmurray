@@ -2,7 +2,9 @@ window.Project = Backbone.Model.extend({
 
 	urlRoot : "dbget_projects",
 
-	idAttribute : "_id"
+	initialize: function() {
+		console.log(this.id);
+	}
 
 });
 

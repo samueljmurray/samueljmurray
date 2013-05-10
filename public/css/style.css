@@ -187,7 +187,8 @@ a:hover {
 }
 
 #projects-splash {
-	height:800px;
+	height:150px!important;
+	min-height:150px!important;
 }
 
 .projects-splash-container {
@@ -199,7 +200,7 @@ a:hover {
 	top:0px;
 	left:0px;
 	width:100%;
-	height:800px;
+	height:150px;
 	z-index:2;
 }
 
@@ -225,6 +226,10 @@ a:hover {
 	height:60px;
 	position:relative;
 	cursor:pointer;
+}
+
+.project-scroll-back {
+	opacity:0.4;
 }
 
 .project-scroll-back:before {
@@ -281,6 +286,21 @@ a:hover {
 	-webkit-transform:rotate(135deg);
 	-ms-transform:rotate(135deg);
 	-o-transform:rotate(135deg);
+}
+
+.project-img-wrapper {
+	margin:0 auto;
+	text-align:center;
+	border:5px solid #FFF;
+	box-shadow:0 0 0 1px #D2D2D2;
+}
+
+.project-img-wrapper > a {
+	display:block;
+}
+
+.project-img {
+	
 }
 
 /* ZIG-ZAG BORDER

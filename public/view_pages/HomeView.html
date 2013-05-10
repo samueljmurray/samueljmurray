@@ -34,10 +34,13 @@
 						<div class="row-fluid">
 							<div class="span1"></div>
 							<div class="span10 center" style="padding:0 10%">
+								<% console.log(projects) %>
 								<% if (!projects[i]) { %>
 									<h2>No such project</h2>
 								<% } else { %>
-									<div style="width:100%; padding-bottom:20px"><img src="img/usemine-blueprint.png" alt="UseMine"/></div>
+									<div class="project-img-wrapper">
+										<%= '<a href="/#/projects/' + projects[i].permalink + '"><img class="project-img" src="' + projects[i].image + '" alt="' + projects[i].title + '"/></a>' %>
+									</div>
 								<% } %>
 							</div>
 							<div class="span1"></div>

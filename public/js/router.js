@@ -5,7 +5,7 @@ var AppRouter = Backbone.Router.extend({
 		"home"			: "home",
 		"cv"				: "cv",
 		"projects"			: "allProjects",
-		"projects/:id"		: "oneProject",
+		"projects/:permalink"		: "oneProject",
 		"blogs"				: "allBlogs",
 		"blogs/page/:page"	: "allBlogs",
 		"blogs/:id"			: "oneBlog",
@@ -42,8 +42,8 @@ var AppRouter = Backbone.Router.extend({
 		}});
 	},
 
-	oneProject : function(id) {
-		var project = new Project({_id:id});
+	oneProject : function(permalink) {
+		var project = new Project({id:permalink});
 		project.fetch({success:function() {
 			$('#content-feed').html(new ProjectView({
 				model:project

@@ -11,28 +11,40 @@ window.HomeView = Backbone.View.extend({
 	},
 
 	events: {
-      "click .project-scroll-back"   : "projectScrollBack",
-      "click .project-scroll-forward" : "projectScrollForward"
+      "click .project-scroll-back"    : "projectScrollBack",
+      "click .project-scroll-forward" : "projectScrollForward",
   },
 
   projectScrollBack : function() {
-  	if (!window.projectspos) {
-  		window.projectspos = 0;
-  	}
+    if (typeof window.projectpos == "undefined") {
+      window.projectpos = 0;
+    }
   	if (window.projectspos != 0) {
-  		window.projectspos -= 1;
-  		$("#projects-splash-wrapper").animate({left: '-' + window.projectspos + '00%'},500);
+      if (window.projectpos == 3) {
+        $('.project-scroll-forward').css('opacity','1');
+      }
+  		window.projectpos -= 1;
+  		$("#projects-splash-wrapper").animate({left: '-' + window.projectpos + '00%'},500);
+      if (window.projectpos == 0) {
+        $('.project-scroll-back').css('opacity','0.4');
+      }
   	}
   },
 
-  projectScrollForward : function() {
-  	if (!window.projectspos) {
-  		window.projectspos = 0;
+  projectScrollForward : function(e) {
+    if (typeof window.projectpos == "undefined") {
+      window.projectpos = 0;
+    }
+  	if (window.projectpos != 3) {
+      if (window.projectpos == 0) {
+        $('.project-scroll-back').css('opacity','1');
+      }
+  		window.projectpos += 1;
+  		$("#projects-splash-wrapper").animate({left: '-' + window.projectpos + '00%'},500);
+      if (window.projectpos == 3) {
+        $('.project-scroll-forward').css('opacity','0.4');
+      }
   	}
-  	if (window.projectspos != 3) {
-  		window.projectspos += 1;
-  		$("#projects-splash-wrapper").animate({left: '-' + window.projectspos + '00%'},500);
-  	}
-  }
+  },
 
 })

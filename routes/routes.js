@@ -67,8 +67,7 @@ exports.allProjects = function(req, res){
 };
 
 exports.oneProject = function(req, res){
-	var id = db.ObjectId(req.params.id);
-	db.projects.findOne({"_id" : id},function(err,project){
+	db.projects.findOne({"permalink" : req.params.permalink},function(err,project){
 		if ((req.headers.host == 'localhost:3000') || (req.headers.host == 'samueljmurray.herokuapp.com')) {
 			if (err) {
 				res.json({"ERROR" : err});
