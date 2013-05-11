@@ -21,15 +21,15 @@
 					<div class="cv-tech">
 						<h3>Technologies</h3>
 						<dl class="dl-horizontal">
-						<% $.each(technologies,function(dt,dd){ %>
-							<%= '<dt>' + dt + '</dt>' %>
-							<%= '<dd>' + dd + '</dd>' %>
-						<% }); %>
+							<% $.each(this.model.attributes[0].technologies,function(dt,dd){ %>
+								<%= '<dt>' + dt + '</dt>' %>
+								<%= '<dd>' + dd + '</dd>' %>
+							<% }); %>
 						</dl>
 					</div>
 					<div class="cv-experience">
 						<h3>Experience</h3>
-						<% $.each(experience,function(key,ex){ %>
+						<% $.each(this.model.attributes[0].experience,function(key,ex){ %>
 							<div class="cv-entry">
 								<div class="cv-left">
 									<div>
@@ -47,7 +47,7 @@
 					</div>
 					<div class="cv-education">
 						<h3>Education</h3>
-						<% $.each(education,function(key,ed){ %>
+						<% $.each(this.model.attributes[0].education,function(key,ed){ %>
 							<div class="cv-entry">
 								<div class="cv-left">
 									<div>
@@ -63,17 +63,14 @@
 							</div>
 						<% }); %>
 					</div>
-					<div class="cv-personal">
-						<h3>Personal</h3>
-						<% $.each(personal,function(key,p){ %>
-							<%= p %>
-							<% if (key != (personal.length-1)) { %>
-								<%= '&nbsp;&nbsp;&mdash;&nbsp;&nbsp;' %>
-							<% } %>
+					<div class="cv-voluntary">
+						<h3>Voluntary</h3>
+						<% $.each(this.model.attributes[0].voluntary,function(key,p){ %>
+							<%= '<li>' + p + '</li>' %>
 						<% }); %>
 					</div>
 				</div>
 			</div>
-		</span>
+		</div>
 	</div>
 </div>

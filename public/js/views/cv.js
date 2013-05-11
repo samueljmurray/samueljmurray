@@ -2,12 +2,16 @@ window.CvView = Backbone.View.extend({
 	
 	initialize: function() {
 		this.render();
+		this.documentready();
 	},
 
 	render: function () {
-		console.log(this.model);
 		$(this.el).html(this.template(this.model.toJSON()));
 		return this;
-	}
+	},
+
+	documentready : function() {
+		$(window).scrollTop(0);
+	},
 
 })

@@ -1,5 +1,5 @@
 window.CV = Backbone.Model.extend({
 
-	url : "dbget_cv"
+	urlRoot : "dbget_cv"
 
 });
