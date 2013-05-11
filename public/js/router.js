@@ -27,17 +27,19 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	cv : function() {
-		if (!this.cvView) {
-			this.cvView = new CvView();
-		}
-		$('#content-feed').html(this.cvView.el);
+		var cv = new CV();
+		cv.fetch({success:function() {
+			$('#content-feed').html(new CvView({
+				model:cv
+			}).el);
+		}});
 	},
 
 	allProjects : function() {
 		var projectList = new ProjectCollection();
 		projectList.fetch({success:function() {
 			$('#content-feed').html(new ProjectListView({
-				model: projectList
+				model:projectList
 			}).el);
 		}});
 	},
@@ -87,7 +89,7 @@ var AppRouter = Backbone.Router.extend({
 
 });
 
-utils.loadTemplate(['HeaderView', 'HomeView', 'CvView', 'ProjectListView', 'ProjectView', 'BlogListView', 'BlogView', 'NotFoundView', 'ConstructionView'], function() {
+utils.loadTemplate(['HeaderView', 'HomeView', 'CvView', 'ProjectListViewItem', 'ProjectListView', 'ProjectView', 'BlogListViewItem', 'BlogListView', 'BlogView', 'NotFoundView', 'ConstructionView'], function() {
 	router = new AppRouter();
 	Backbone.history.start();
 });

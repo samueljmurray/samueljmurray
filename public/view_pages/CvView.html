@@ -1,1 +1,79 @@
-<h1>CV</h1>
+<div class="container">
+	<div class="row">
+		<div class="span12">
+			<div class="span12 home-cv">
+				<div class="home-cv-inner">
+					<div class="cv-top">
+						<div class="cv-top-left">
+							<div>
+								<h1 style="margin:0px;line-height:30px;">Samuel Murray</h1>
+								<p style="margin-top:10px;font-family:Lato;font-size:18px;text-transform:uppercase;">Full-stack Web Developer</p>
+							</div>
+						</div>
+						<div class="cv-top-right">
+							<div>
+								<h4 style="margin:0;margin-top:5px">samueljmurray.herokuapp.com</h4>
+								<p style="margin:0px">samueljmurray@googlemail.com</p>
+								<p style="font-family:Lato">+44 7970 896 660 | LONDON</p>
+							</div>
+						</div>
+					</div>
+					<div class="cv-tech">
+						<h3>Technologies</h3>
+						<dl class="dl-horizontal">
+						<% $.each(technologies,function(dt,dd){ %>
+							<%= '<dt>' + dt + '</dt>' %>
+							<%= '<dd>' + dd + '</dd>' %>
+						<% }); %>
+						</dl>
+					</div>
+					<div class="cv-experience">
+						<h3>Experience</h3>
+						<% $.each(experience,function(key,ex){ %>
+							<div class="cv-entry">
+								<div class="cv-left">
+									<div>
+										<%= '<p><strong>' + ex.title + '</strong></p>' %>
+										<%= '<p style="font-family:Lato;text-transform:uppercase;">' + ex.date + '</p>' %>
+									</div>
+								</div>
+								<div class="cv-right">
+									<div>
+										<%= '<ul>' + ex.description + '</ul>' %>
+									</div>
+								</div>
+							</div>
+						<% }); %>
+					</div>
+					<div class="cv-education">
+						<h3>Education</h3>
+						<% $.each(education,function(key,ed){ %>
+							<div class="cv-entry">
+								<div class="cv-left">
+									<div>
+										<%= '<p><strong>' + ed.institution + '</strong></p>' %>
+										<%= '<p style="font-family:Lato;text-transform:uppercase;">' + ed.date + '</p>' %>
+									</div>
+								</div>
+								<div class="cv-right">
+									<div>
+										<%= '<p>' + ed.qualification + '</p>' %>
+									</div>
+								</div>
+							</div>
+						<% }); %>
+					</div>
+					<div class="cv-personal">
+						<h3>Personal</h3>
+						<% $.each(personal,function(key,p){ %>
+							<%= p %>
+							<% if (key != (personal.length-1)) { %>
+								<%= '&nbsp;&nbsp;&mdash;&nbsp;&nbsp;' %>
+							<% } %>
+						<% }); %>
+					</div>
+				</div>
+			</div>
+		</span>
+	</div>
+</div>

@@ -8,7 +8,7 @@ exports.homeitems = function(req, res) {
 		projects : {},
 		blog : {}
 	};
-	db.cv.find(function(err, cv) {
+	db.cv.find().sort({$natural: -1}).limit(1, function(err, cv) {
 		if ((req.headers.host == 'localhost:3000') || (req.headers.host == 'samueljmurray.herokuapp.com')) {
 			if (err) {
 				rtn_json.cv = {"ERROR" : err};
@@ -41,7 +41,7 @@ exports.homeitems = function(req, res) {
 // --- CV ---
 
 exports.cv = function(req, res){
-	db.cv.find(function(err, cv){
+	db.cv.find().sort({$natural: -1}).limit(1, function(err, cv){
 		if ((req.headers.host == 'localhost:3000') || (req.headers.host == 'samueljmurray.herokuapp.com')) {
 			if (err) {
 				res.json({"ERROR" : err});

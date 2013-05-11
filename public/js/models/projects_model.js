@@ -8,8 +8,10 @@ window.Project = Backbone.Model.extend({
 
 });
 
-window.ProjectCollection = Backbone.Model.extend({
+window.ProjectCollection = Backbone.Collection.extend({
 
-	urlRoot : "dbget_projects"
+	model: Project,
+
+	url: "dbget_projects"
 
 });
