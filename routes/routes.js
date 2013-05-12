@@ -55,7 +55,7 @@ exports.cv = function(req, res){
 // --- PROJECTS ---
 
 exports.allProjects = function(req, res){
-	db.projects.find(function(err, projects){
+	db.projects.find().sort({$natural:-1}, function(err, projects){
 		if ((req.headers.host == 'localhost:3000') || (req.headers.host == 'samueljmurray.herokuapp.com')) {
 			if (err) {
 				res.json({"ERROR" : err});

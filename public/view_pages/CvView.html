@@ -1,73 +1,85 @@
 <div class="container">
 	<div class="row">
-		<div class="span12">
-			<div class="span12 home-cv">
-				<div class="home-cv-inner">
-					<div class="cv-top">
-						<div class="cv-top-left">
-							<div>
-								<h1 style="margin:0px;line-height:30px;">Samuel Murray</h1>
-								<p style="margin-top:10px;font-family:Lato;font-size:18px;text-transform:uppercase;">Full-stack Web Developer</p>
-							</div>
-						</div>
-						<div class="cv-top-right">
-							<div>
-								<h4 style="margin:0;margin-top:5px">samueljmurray.herokuapp.com</h4>
-								<p style="margin:0px">samueljmurray@googlemail.com</p>
-								<p style="font-family:Lato">+44 7970 896 660 | LONDON</p>
-							</div>
+		<div class="span12 home-cv">
+			<div class="home-cv-inner">
+				<div class="cv-top">
+					<div class="cv-top-left">
+						<div>
+							<h1 style="margin:0px;line-height:30px;">Samuel Murray</h1>
+							<p style="margin-top:10px;font-family:Lato;font-size:18px;text-transform:uppercase;">Full-stack Web Developer</p>
 						</div>
 					</div>
-					<div class="cv-tech">
-						<h3>Technologies</h3>
-						<dl class="dl-horizontal">
-							<% $.each(this.model.attributes[0].technologies,function(dt,dd){ %>
-								<%= '<dt>' + dt + '</dt>' %>
-								<%= '<dd>' + dd + '</dd>' %>
-							<% }); %>
-						</dl>
+					<div class="cv-top-right">
+						<div>
+							<h4 style="margin:0;margin-top:5px">samueljmurray.herokuapp.com</h4>
+							<p style="margin:0px">samueljmurray@googlemail.com</p>
+							<p style="font-family:Lato">+44 7970 896 660 | LONDON</p>
+						</div>
 					</div>
-					<div class="cv-experience">
-						<h3>Experience</h3>
-						<% $.each(this.model.attributes[0].experience,function(key,ex){ %>
-							<div class="cv-entry">
-								<div class="cv-left">
-									<div>
-										<%= '<p><strong>' + ex.title + '</strong></p>' %>
-										<%= '<p style="font-family:Lato;text-transform:uppercase;">' + ex.date + '</p>' %>
-									</div>
-								</div>
-								<div class="cv-right">
-									<div>
-										<%= '<ul>' + ex.description + '</ul>' %>
-									</div>
+				</div>
+				<div class="cv-experience">
+					<h3>Experience</h3>
+					<% $.each(this.model.attributes[0].experience,function(key,ex){ %>
+						<div class="cv-entry">
+							<div class="cv-left">
+								<div>
+									<%= '<p><strong>' + ex.title + '</strong></p>' %>
+									<%= '<p style="font-family:Lato;text-transform:uppercase;">' + ex.date + '</p>' %>
 								</div>
 							</div>
-						<% }); %>
-					</div>
-					<div class="cv-education">
-						<h3>Education</h3>
-						<% $.each(this.model.attributes[0].education,function(key,ed){ %>
-							<div class="cv-entry">
-								<div class="cv-left">
-									<div>
-										<%= '<p><strong>' + ed.institution + '</strong></p>' %>
-										<%= '<p style="font-family:Lato;text-transform:uppercase;">' + ed.date + '</p>' %>
-									</div>
-								</div>
-								<div class="cv-right">
-									<div>
-										<%= '<p>' + ed.qualification + '</p>' %>
-									</div>
+							<div class="cv-right">
+								<div>
+									<%= '<ul>' + ex.description + '</ul>' %>
 								</div>
 							</div>
+						</div>
+					<% }); %>
+				</div>
+				<div class="cv-education">
+					<h3>Education</h3>
+					<% $.each(this.model.attributes[0].education,function(key,ed){ %>
+						<div class="cv-entry">
+							<div class="cv-left">
+								<div>
+									<%= '<p><strong>' + ed.institution + '</strong></p>' %>
+									<%= '<p style="font-family:Lato;text-transform:uppercase;">' + ed.date + '</p>' %>
+								</div>
+							</div>
+							<div class="cv-right">
+								<div>
+									<%= '<p>' + ed.qualification + '</p>' %>
+								</div>
+							</div>
+						</div>
+					<% }); %>
+				</div>
+				<div class="cv-tech">
+					<h3>Technologies</h3>
+					<dl class="dl-horizontal">
+						<% $.each(this.model.attributes[0].technologies,function(dt,dd){ %>
+							<%= '<dt>' + dt + '</dt>' %>
+							<%= '<dd>' + dd + '</dd>' %>
 						<% }); %>
-					</div>
-					<div class="cv-voluntary">
+					</dl>
+				</div>
+				<div class="cv-vol-interests">
+					<div class="cv-left left">
 						<h3>Voluntary</h3>
-						<% $.each(this.model.attributes[0].voluntary,function(key,p){ %>
-							<%= '<li>' + p + '</li>' %>
-						<% }); %>
+						<ul>
+							<% $.each(this.model.attributes[0].voluntary,function(key,p){ %>
+								<%= '<li>' + p + '</li>' %>
+							<% }); %>
+						</ul>
+					</div>
+					<div class="cv-right">
+						<div style="margin-left:20px">
+							<h3>Interests</h3>
+							<ul>
+								<% $.each(this.model.attributes[0].interests,function(key,p){ %>
+									<%= '<li>' + p + '</li>' %>
+								<% }); %>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>

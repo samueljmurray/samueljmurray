@@ -1,9 +1,18 @@
 <div class="container">
 	<div class="row">
 		<div class="span12">
+			<a href="/#/projects"><strong>&lt; Back to projects</strong></a><HR/>
+		</div>
+		<div class="span12">
 			<h1><%= title %></h1><BR/>
 			<h4><%= shortdesc %></h4><HR/>
-			<%= detaileddesc %>
+			<%= '<img src="' + image + '" style="float:right;margin-left:20px;margin-bottom:20px;width:50%"/>' %>
+			<% $.each(detaileddesc,function(key,para) { %>
+				<%= '<p>' + para + '</p>' %>
+			<% }) %>
+			<% if (typeof projectlink != 'undefined') { %>
+				<%= '<HR/><strong><a href="' + projectlink + '" target="_blank">Link to Project</a></strong>' %>
+			<% } %>
 		</div>
 	</div>
 </div>

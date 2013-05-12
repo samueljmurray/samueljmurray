@@ -1,8 +1,7 @@
 var AppRouter = Backbone.Router.extend({
 
 	routes: {
-		""					: "construction",
-		"home"			: "home",
+		""					: "home",
 		"cv"				: "cv",
 		"projects"			: "allProjects",
 		"projects/:permalink"		: "oneProject",

@@ -31,6 +31,10 @@ html,body {
 	width:100%;
 }
 
+.left {
+	text-align:left!important;
+}
+
 .center {
 	text-align:center;
 }
@@ -150,6 +154,7 @@ a:hover {
 	text-transform:uppercase;
 	position:relative;
 	display:inline-block;
+	font-family:Lato;
 }
 
 .title:before {
@@ -208,7 +213,7 @@ a:hover {
 }
 
 .projects-splash-container {
-	height:800px;
+	height:1000px;
 }
 
 #projects-title-arrows-wrapper {
@@ -309,14 +314,16 @@ a:hover {
 	text-align:center;
 	border:5px solid #FFF;
 	box-shadow:0 0 0 1px #D2D2D2;
+	margin:0 10%;
 }
 
 .project-img-wrapper > a {
 	display:block;
+	max-width:100%;
 }
 
 .project-img {
-	
+	max-width:100%;
 }
 
 .cv-splash-container {
@@ -373,7 +380,7 @@ top:-4px;left:0px;
 	padding:80px;
 }
 
-.cv-top, .cv-tech, .cv-experience, .cv-education {
+.cv-top, .cv-tech, .cv-experience, .cv-education, .cv-vol-interests {
 	display:inline-block;
 	width:100%;
 	padding:10px 0 15px 0;

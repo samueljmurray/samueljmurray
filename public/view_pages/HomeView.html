@@ -1,8 +1,9 @@
 <div class="full-width splash welcome-splash-container">
-	<div class="container-fluid splash-inner" id="welcome-splash">
-		<div class="row-fluid center">
-			<div class="span12">
-				<h1 class="title light">Welcome</h1>
+	<div class="container splash-inner" id="welcome-splash">
+		<div class="row center">
+			<div class="span8 offset2">
+				<h1 class="title light">Welcome</h1><BR/><BR/><BR/><BR/>
+				<h3 style="font-family:Lato;font-weight:100">Hi, I'm Sam, a full-stack web developer with an interest in understanding how technology can be used to combat social problems, improve accessibility and educate.</h3>
 			</div>
 		</div>
 	</div>
@@ -10,7 +11,7 @@
 
 <div class="full-width splash projects-splash-container">
 	<div id="projects-title-arrows-wrapper">
-		<div class="container-fluid splash-inner" id="projects-splash">
+		<div class="container splash-inner" id="projects-splash">
 			<div class="row-fluid center">
 				<div class="span1">
 					<span class="project-scroll project-scroll-back"></span>
@@ -30,10 +31,9 @@
 		<% } else { %>
 			<% for (var i=0;i<4;i++) { %>
 			<%= '<div class="project-wrapper" id="project' + i + '" style="left:' + (i*25) + '%">' %>
-					<div class="container-fluid project-container">
-						<div class="row-fluid">
-							<div class="span1"></div>
-							<div class="span10 center" style="padding:0 10%">
+					<div class="container project-container">
+						<div class="row">
+							<div class="span10 offset1 center">
 								<% console.log(projects) %>
 								<% if (!projects[i]) { %>
 									<h2>No such project</h2>
@@ -43,7 +43,6 @@
 									</div>
 								<% } %>
 							</div>
-							<div class="span1"></div>
 						</div>
 					</div>
 				</div>
@@ -53,8 +52,8 @@
 </div>
 
 <div class="full-width splash cv-splash-container">
-	<div class="container-fluid splash-inner" id="cv-splash">
-		<div class="row-fluid">
+	<div class="container splash-inner" id="cv-splash">
+		<div class="row">
 			<a href="/#/cv">
 				<div class="span12 home-cv">
 					<div class="home-cv-inner">
@@ -72,15 +71,6 @@
 									<p style="font-family:Lato">+44 7970 896 660 | LONDON</p>
 								</div>
 							</div>
-						</div>
-						<div class="cv-tech">
-							<h3>Technologies</h3>
-							<dl class="dl-horizontal">
-							<% $.each(cv[0].technologies,function(dt,dd){ %>
-								<%= '<dt>' + dt + '</dt>' %>
-								<%= '<dd>' + dd + '</dd>' %>
-							<% }); %>
-							</dl>
 						</div>
 						<div class="cv-experience">
 							<h3>Experience</h3>
@@ -118,11 +108,34 @@
 								</div>
 							<% }); %>
 						</div>
-						<div class="cv-voluntary">
-							<h3>Voluntary</h3>
-							<% $.each(cv[0].voluntary,function(key,p){ %>
-								<%= '<li>' + p + '</li>' %>
+						<div class="cv-tech">
+							<h3>Technologies</h3>
+							<dl class="dl-horizontal">
+							<% $.each(cv[0].technologies,function(dt,dd){ %>
+								<%= '<dt>' + dt + '</dt>' %>
+								<%= '<dd>' + dd + '</dd>' %>
 							<% }); %>
+							</dl>
+						</div>
+						<div class="cv-vol-interests">
+							<div class="cv-left left">
+								<h3>Voluntary</h3>
+								<ul>
+									<% $.each(cv[0].voluntary,function(key,p){ %>
+										<%= '<li>' + p + '</li>' %>
+									<% }); %>
+								</ul>
+							</div>
+							<div class="cv-right">
+								<div style="margin-left:20px">
+									<h3>Interests</h3>
+									<ul>
+										<% $.each(cv[0].interests,function(key,p){ %>
+											<%= '<li>' + p + '</li>' %>
+										<% }); %>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -134,10 +147,11 @@
 </div>
 
 <div class="full-width splash blog-splash-container">
-	<div class="container-fluid splash-inner" id="blog-splash">
-		<div class="row-fluid center">
+	<div class="container splash-inner" id="blog-splash">
+		<div class="row center">
 			<div class="span12">
 				<h1 class="title dark">Blog</h1>
+				<h4 class="center" style="margin-top:70px">In Progress!</h4>
 			</div>
 		</div>
 	</div>
