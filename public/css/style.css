@@ -642,4 +642,9 @@ footer {
 	.home-cv {
 		display:none;
 	}
+
+	.title {
+		display:block;
+		margin:0;
+	}
 }
