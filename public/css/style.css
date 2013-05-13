@@ -24,7 +24,7 @@ html,body {
 }
 
 .container:first-of-type {
-	//margin-top:100px;
+	margin-top:100px;
 }
 
 .full-width {
