@@ -10,50 +10,65 @@
 </div>
 
 <div class="full-width splash projects-splash-container">
-	<div id="projects-title-arrows-wrapper">
-		<div class="container splash-inner" id="projects-splash">
-			<div class="row-fluid center">
-				<div class="span1">
-					<span class="project-scroll project-scroll-back"></span>
-				</div>
-				<div class="span10">
+	<div class="projects-mobile">
+		<div class="container">
+			<div class="row">
+				<div class="span12 center cv-dl">
 					<h1 class="title dark"><a href="/#/projects">Projects</a></h1>
-				</div>
-				<div class="span1">
-					<span class="project-scroll project-scroll-forward"></span>
+					<a class="btn btn-primary btn-large" href="/download-cv" style="position:relative;top:120px;">See All</a>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="projects-splash-wrapper">
-		<% if (projects.length == 0) { %>
-			<h2>No Projects</h2>
-		<% } else { %>
-			<% for (var i=0;i<4;i++) { %>
-			<%= '<div class="project-wrapper" id="project' + i + '" style="left:' + (i*25) + '%">' %>
-					<div class="container project-container">
-						<div class="row">
-							<div class="span10 offset1 center">
-								<% console.log(projects) %>
-								<% if (!projects[i]) { %>
-									<h2>No such project</h2>
-								<% } else { %>
-									<div class="project-img-wrapper">
-										<%= '<a href="/#/projects/' + projects[i].permalink + '"><img class="project-img" src="' + projects[i].image + '" alt="' + projects[i].title + '"/></a>' %>
-									</div>
-								<% } %>
+	<div class="projects-screen">
+		<div id="projects-title-arrows-wrapper">
+			<div class="container splash-inner" id="projects-splash">
+				<div class="row-fluid center">
+					<div class="span1">
+						<span class="project-scroll project-scroll-back"></span>
+					</div>
+					<div class="span10">
+						<h1 class="title dark"><a href="/#/projects">Projects</a></h1>
+					</div>
+					<div class="span1">
+						<span class="project-scroll project-scroll-forward"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="projects-splash-wrapper">
+			<% if (projects.length == 0) { %>
+				<h2>No Projects</h2>
+			<% } else { %>
+				<% for (var i=0;i<4;i++) { %>
+				<%= '<div class="project-wrapper" id="project' + i + '" style="left:' + (i*25) + '%">' %>
+						<div class="container project-container">
+							<div class="row">
+								<div class="span10 offset1 center">
+									<% console.log(projects) %>
+									<% if (!projects[i]) { %>
+										<h2>No such project</h2>
+									<% } else { %>
+										<div class="project-img-wrapper">
+											<%= '<a href="/#/projects/' + projects[i].permalink + '"><img class="project-img" src="' + projects[i].image + '" alt="' + projects[i].title + '"/></a>' %>
+										</div>
+									<% } %>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				<% } %>
 			<% } %>
-		<% } %>
+		</div>
 	</div>
 </div>
 
 <div class="full-width splash cv-splash-container">
 	<div class="container splash-inner" id="cv-splash">
 		<div class="row">
+			<div class="span12 center cv-dl">
+				<a class="btn btn-primary btn-large" href="/download-cv" style="position:relative;top:120px;"><i class="icon-download-alt icon-white"></i>&nbsp;&nbsp;Download CV as PDF</a>
+			</div>
 			<a href="/#/cv">
 				<div class="span12 home-cv">
 					<div class="home-cv-inner">

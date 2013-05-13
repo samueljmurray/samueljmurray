@@ -206,6 +206,10 @@ a:hover {
 	text-transform:uppercase;
 }
 
+.projects-mobile {
+	display:none;
+}
+
 .projects-splash-container {
 	position:relative;
 	background-color:#E9E9ED;
@@ -383,6 +387,10 @@ top:-4px;left:0px;
 	            -o-linear-gradient(45deg, transparent 75%, #E9E9ED 75%) 0 50%;	
     background-repeat: repeat-x;
     background-size:30px 30px, 30px 30px;
+}
+
+.cv-dl {
+	display:none;
 }
 
 .home-cv {
@@ -608,4 +616,30 @@ footer {
   text-shadow:4px 4px rgba(0,0,0,0.3);
 	line-height:24px;
 	font-size:28px;
+}
+
+@media (max-width: 767px) {
+	.navbar-circle {
+		margin-top:-145px;
+	}
+
+	.projects-mobile {
+		display:block;
+	}
+
+	.projects-screen {
+		display:none;
+	}
+
+	.projects-splash-container {
+		height:500px;
+	}
+
+	.cv-dl {
+		display:block;
+	}
+
+	.home-cv {
+		display:none;
+	}
 }
