@@ -39,6 +39,10 @@ html,body {
 	text-align:center;
 }
 
+.right {
+	text-align:right!important;
+}
+
 h1 {
 	font-weight:700;
 }
@@ -348,7 +352,13 @@ top:-3px;left:0px;
     background: linear-gradient(135deg, transparent 75%, #999 75%) 0 50%,
                 linear-gradient(-135deg, transparent 75%, #999 75%) 0 50%;
 	background: -webkit-linear-gradient(135deg, transparent 75%, #999 75%) 0 50%,
-	            -webkit-linear-gradient(45deg, transparent 75%, #999 75%) 0 50%;	
+	            -webkit-linear-gradient(45deg, transparent 75%, #999 75%) 0 50%;
+	background: -moz-linear-gradient(135deg, transparent 75%, #999 75%) 0 50%,
+	            -moz-linear-gradient(45deg, transparent 75%, #999 75%) 0 50%;
+	background: -ms-linear-gradient(135deg, transparent 75%, #999 75%) 0 50%,
+	            -ms-linear-gradient(45deg, transparent 75%, #999 75%) 0 50%;
+	background: -o-linear-gradient(135deg, transparent 75%, #999 75%) 0 50%,
+	            -o-linear-gradient(45deg, transparent 75%, #999 75%) 0 50%;	
     background-repeat: repeat-x;
     background-size:30px 30px, 30px 30px;
 }
@@ -364,7 +374,13 @@ top:-4px;left:0px;
     background: linear-gradient(135deg, transparent 75%, #E9E9ED 75%) 0 50%,
                 linear-gradient(-135deg, transparent 75%, #E9E9ED 75%) 0 50%;
 	background: -webkit-linear-gradient(135deg, transparent 75%, #E9E9ED 75%) 0 50%,
-	            -webkit-linear-gradient(45deg, transparent 75%, #E9E9ED 75%) 0 50%;	
+	            -webkit-linear-gradient(45deg, transparent 75%, #E9E9ED 75%) 0 50%;
+	background: -moz-linear-gradient(135deg, transparent 75%, #E9E9ED 75%) 0 50%,
+	            -moz-linear-gradient(45deg, transparent 75%, #E9E9ED 75%) 0 50%;
+	background: -ms-linear-gradient(135deg, transparent 75%, #E9E9ED 75%) 0 50%,
+	            -ms-linear-gradient(45deg, transparent 75%, #E9E9ED 75%) 0 50%;
+	background: -o-linear-gradient(135deg, transparent 75%, #E9E9ED 75%) 0 50%,
+	            -o-linear-gradient(45deg, transparent 75%, #E9E9ED 75%) 0 50%;	
     background-repeat: repeat-x;
     background-size:30px 30px, 30px 30px;
 }
@@ -435,7 +451,13 @@ bottom: -2px;left:0px;
     background: linear-gradient(-135deg, transparent 75%, rgba(0,0,0,0.05) 75%) 0 50%,
                 linear-gradient(135deg, transparent 75%, rgba(0,0,0,0.05) 75%) 0 50%;
 	background: -webkit-linear-gradient(-135deg, transparent 75%, rgba(0,0,0,0.05) 75%) 0 50%,
-	            -webkit-linear-gradient(-45deg, transparent 75%, rgba(0,0,0,0.05) 75%) 0 50%;	
+	            -webkit-linear-gradient(-45deg, transparent 75%, rgba(0,0,0,0.05) 75%) 0 50%;
+	background: -moz-linear-gradient(-135deg, transparent 75%, rgba(0,0,0,0.05) 75%) 0 50%,
+	            -moz-linear-gradient(-45deg, transparent 75%, rgba(0,0,0,0.05) 75%) 0 50%;
+	background: -ms-linear-gradient(-135deg, transparent 75%, rgba(0,0,0,0.05) 75%) 0 50%,
+	            -ms-linear-gradient(-45deg, transparent 75%, rgba(0,0,0,0.05) 75%) 0 50%;
+	background: -o-linear-gradient(-135deg, transparent 75%, rgba(0,0,0,0.05) 75%) 0 50%,
+	            -o-linear-gradient(-45deg, transparent 75%, rgba(0,0,0,0.05) 75%) 0 50%;	
     background-repeat: repeat-x;
     background-size:30px 30px, 30px 30px;
 }
@@ -451,7 +473,13 @@ bottom:-3px;left:0px;
     background: linear-gradient(-135deg, transparent 75%, #FFF 75%) 0 50%,
                 linear-gradient(135deg, transparent 75%, #FFF 75%) 0 50%;
 	background: -webkit-linear-gradient(-135deg, transparent 75%, #FFF 75%) 0 50%,
-	            -webkit-linear-gradient(-45deg, transparent 75%, #FFF 75%) 0 50%;	
+	            -webkit-linear-gradient(-45deg, transparent 75%, #FFF 75%) 0 50%;
+	background: -moz-linear-gradient(-135deg, transparent 75%, #FFF 75%) 0 50%,
+	            -moz-linear-gradient(-45deg, transparent 75%, #FFF 75%) 0 50%;
+	background: -ms-linear-gradient(-135deg, transparent 75%, #FFF 75%) 0 50%,
+	            -ms-linear-gradient(-45deg, transparent 75%, #FFF 75%) 0 50%;
+	background: -o-linear-gradient(-135deg, transparent 75%, #FFF 75%) 0 50%,
+	            -o-linear-gradient(-45deg, transparent 75%, #FFF 75%) 0 50%;	
     background-repeat: repeat-x;
     background-size:30px 30px, 30px 30px;
 }

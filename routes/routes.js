@@ -1,4 +1,5 @@
 var db = require('../database.js');
+var path = require('path');
 
 // --- HOMEITEMS ---
 
@@ -106,6 +107,7 @@ exports.oneBlog = function(req, res){
 };
 
 exports.downloadCV = function(req,res) {
-	var file = "../public/pdf/CV_Samuel_Murray.pdf";
+	var file = path.resolve(__dirname + "/../public/pdf/CV_Samuel_Murray.pdf");
+	console.log(file);
 	res.download(file, "CV_Samuel_Murray.pdf");
 };
