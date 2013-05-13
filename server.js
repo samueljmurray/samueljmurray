@@ -22,6 +22,7 @@ app.get('/dbget_projects', routes.allProjects);
 app.get('/dbget_projects/:permalink', routes.oneProject);
 app.get('/dbget_blogs', routes.allProjects);
 app.get('/dbget_blogs/:id', routes.oneProject);
+app.get('/download-cv', routes.downloadCV)
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

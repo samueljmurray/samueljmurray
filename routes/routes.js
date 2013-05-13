@@ -104,3 +104,8 @@ exports.oneBlog = function(req, res){
 		}
 	});
 };
+
+exports.downloadCV = function(req,res) {
+	var file = "../public/pdf/CV_Samuel_Murray.pdf";
+	res.download(file, "CV_Samuel_Murray.pdf");
+};
